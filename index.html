@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATADET GUY SIPTENE — Portfolio BTS SIO SLAM</title>
+  <meta name="description" content="Portfolio de Gaïus Siassiamo, étudiant en BTS SIO option SLAM à l'institut F2i." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Curseur personnalisé -->
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Fond grille + particules -->
+  <div class="grid-bg"></div>
+  <canvas id="canvas"></canvas>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════ -->
+  <header>
+    <a href="#hero" class="logo">
+      <img src="img/guy.png" alt="Gaïus" />
+      <div>
+        <span class="logo-name">guy.dev</span>
+        <span class="logo-role">BTS SIO · SLAM</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#about">about</a>
+      <a href="#job">stages</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projets</a>
+      <a href="#tech">veille</a>
+      <a href="docu/CV_Gaius_Siassiamo_Alternance-1.pdf" class="nav-cta" target="_blank">CV.pdf ↗</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Navigation mobile -->
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#about">about</a>
+    <a href="#job">stages</a>
+    <a href="#skills">skills</a>
+    <a href="#projects">projets</a>
+    <a href="#tech">veille</a>
+    <a href="#contact">contact</a>
+    <a href="docu/CV_Gaius_Siassiamo_Alternance-1.pdf" target="_blank">CV.pdf ↗</a>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-eyebrow">Bonjour, je m'appelle</div>
+
+    <h1 class="hero-name">
+      GUY<br><span class="accent">ATADET.</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Étudiant en BTS SIO option SLAM · Développeur en devenir<br>
+      Passionné par le code, la sécurité et les bonnes pratiques.
+    </p>
+
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot r"></div>
+        <div class="terminal-dot y"></div>
+        <div class="terminal-dot g"></div>
+        <span class="terminal-filename">guy.json</span>
+      </div>
+      <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> guy.json</div>
+      <div class="terminal-line"><span class="t-comment">{</span></div>
+      <div class="terminal-line">&nbsp;&nbsp;<span class="t-str">"formation"</span>: <span class="t-val">"BTS SIO SLAM · F2i"</span>,</div>
+      <div class="terminal-line">&nbsp;&nbsp;<span class="t-str">"status"</span>: <span class="t-val">"2ème année"</span>,</div>
+      <div class="terminal-line">&nbsp;&nbsp;<span class="t-str">"langages"</span>: <span class="t-val">["PHP", "Java", "SQL", "HTML/CSS"]</span>,</div>
+      <div class="terminal-line">&nbsp;&nbsp;<span class="t-str">"recherche"</span>: <span class="t-val">"alternance"</span></div>
+      <div class="terminal-line"><span class="t-comment">}</span></div>
+      <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor"></span></div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">Voir mes projets →</a>
+      <a href="docu/CV_Gaius_Siassiamo_Alternance-1.pdf" class="btn-secondary" target="_blank">Télécharger CV</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       À PROPOS
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="about">
+    <div class="section-label">01 — À propos</div>
+    <h2 class="section-title">Qui suis-<span>je</span> ?</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Actuellement étudiant en <strong>BTS SIO option SLAM</strong> à l'institut F2i, je développe des compétences solides en développement logiciel, bases de données et bonnes pratiques de code.</p>
+        <p>Toujours en quête d'apprentissage, j'explore constamment de nouvelles technologies pour rester à la pointe du développement informatique. La sécurité applicative est un domaine qui me passionne particulièrement.</p>
+
+        <div class="bts-cards reveal">
+          <div class="bts-card">
+            <h3>Qu'est-ce que le BTS SIO ?</h3>
+            <p>Le BTS SIO (Services Informatiques aux Organisations) est un diplôme Bac+2 formant des experts en informatique, compétents en développement, administration et maintenance des systèmes.</p>
+          </div>
+          <div class="bts-card">
+            <h3>Option SLAM</h3>
+            <p><em>Solutions Logicielles et Applications Métiers</em> — former des spécialistes du cycle complet de développement : cahiers des charges, développement, tests, intégration.</p>
+            <div class="tag-list">
+              <span class="tag">Développeur app.</span>
+              <span class="tag">Analyste</span>
+              <span class="tag">Intégrateur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card reveal">
+        <div class="info-card-title">// profil.info</div>
+        <div class="info-row">
+          <span class="info-key">formation</span>
+          <span class="info-val">BTS SIO SLAM</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">école</span>
+          <span class="info-val">Institut F2i</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">année</span>
+          <span class="info-val">2ème année</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">statut</span>
+          <span class="info-val">En alternance</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">localisation</span>
+          <span class="info-val">France</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">github</span>
+          <span class="info-val">Guyat242</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       STAGES / EXPÉRIENCES
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="job">
+    <div class="section-label">02 — Expériences</div>
+    <h2 class="section-title">Mon parcours <span>professionnel</span></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Déc. 2025 — Jan. 2026</div>
+        <div class="timeline-title">Stagiaire Développement Web</div>
+        <div class="timeline-company">// YANIS.K Africa</div>
+        <div class="timeline-body">
+          <ul class="timeline-tasks">
+            <li>Conception et développement d'un site vitrine complet</li>
+            <li>Optimisation SEO et référencement naturel</li>
+            <li>Intégration responsive et multi-navigateurs</li>
+            <li>Mise en place de formulaires de contact et analytics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Mai 2025 — Juin 2025</div>
+        <div class="timeline-title">Stagiaire Support Technique</div>
+        <div class="timeline-company">// Prepare ton permis juvisy · France</div>
+        <div class="timeline-body">
+          <ul class="timeline-tasks">
+            <li>Assistance utilisateurs et traitement de contrats/appels</li>
+            <li>Maintenance et configuration des postes informatiques  </li>
+            <li>Gestion de comptes utilisateurs (Active Directory)    </li>
+            <li>Tests de systèmes et vérifications techniques       </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Juin 2022 — Juil. 2023</div>
+        <div class="timeline-title"> stagiaire Technicien Support Informatique</div>
+        <div class="timeline-company">// istanbul· Turquie</div>
+        <div class="timeline-body">
+          <ul class="timeline-tasks">
+            <li>Assistance utilisateurs et traitement de contrats/appels</li>
+            <li>Mise à jour de contenus sur différentes plateformes</li>
+            <li>Tests fonctionnels et validation de la mise à jour </li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Mai 2021 </div>
+        <div class="timeline-title"> Stage d'observation</div>
+        <div class="timeline-company">// Accra· ghana</div>
+        <div class="timeline-body">
+          <ul class="timeline-tasks">
+            <li>Immersion en environnement informatique professionnel</li>
+            <li>Découverte des services techniques et de l'infrastructure</li>
+           
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Février 2019</div>
+        <div class="timeline-title">Stage d'observation</div>
+        <div class="timeline-company">// Temple du santenaire· Congo-Brazzaville</div>
+        <div class="timeline-body">
+          <ul class="timeline-tasks">
+            <li>Immersion en environnement informatique professionnel</li>
+            <li>Découverte des services techniques et de l'infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       COMPÉTENCES
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="skills">
+    <div class="section-label">03 — Compétences</div>
+    <h2 class="section-title">Stack & <span>outils</span></h2>
+
+    <p class="skills-intro-text">Grâce à la formation et à l'autodidaxie, j'ai développé des compétences en développement web, mobile et gestion de bases de données.</p>
+
+    <!-- Slider Langages -->
+    <div class="skills-category reveal">
+      <div class="skills-cat-label">Langages & Technologies</div>
+      <div class="skills-slider-wrapper">
+        <div class="skills-slider">
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-logo"><span class="skill-name">PHP</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo"><span class="skill-name">Java</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-logo"><span class="skill-name">C</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skill-logo"><span class="skill-name">SQL</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-logo"><span class="skill-name">HTML5</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-logo"><span class="skill-name">CSS3</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="skill-logo"><span class="skill-name">JavaScript</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-logo"><span class="skill-name">Linux</span></div>
+          <!-- Duplicates for infinite loop -->
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-logo"><span class="skill-name">PHP</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo"><span class="skill-name">Java</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-logo"><span class="skill-name">C</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skill-logo"><span class="skill-name">SQL</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-logo"><span class="skill-name">HTML5</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-logo"><span class="skill-name">CSS3</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="skill-logo"><span class="skill-name">JavaScript</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-logo"><span class="skill-name">Linux</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Outils -->
+    <div class="skills-category reveal">
+      <div class="skills-cat-label">Logiciels & Outils</div>
+      <div class="skills-slider-wrapper">
+        <div class="skills-slider">
+          <div class="skill-card"><img src="https://cdn.worldvectorlogo.com/logos/vmware-1.svg" alt="VMware" class="skill-logo"><span class="skill-name">VMware</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo"><span class="skill-name">VS Code</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" alt="Eclipse" class="skill-logo"><span class="skill-name">Eclipse</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" class="skill-logo"><span class="skill-name">Android Studio</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" alt="WampServer" class="skill-logo"><span class="skill-name">WampServer</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="skill-logo"><span class="skill-name">SQL Server</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo"><span class="skill-name">Git</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo"><span class="skill-name">GitHub</span></div>
+          <!-- Duplicates -->
+          <div class="skill-card"><img src="https://cdn.worldvectorlogo.com/logos/vmware-1.svg" alt="VMware" class="skill-logo"><span class="skill-name">VMware</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo"><span class="skill-name">VS Code</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" alt="Eclipse" class="skill-logo"><span class="skill-name">Eclipse</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" class="skill-logo"><span class="skill-name">Android Studio</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" alt="WampServer" class="skill-logo"><span class="skill-name">WampServer</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" class="skill-logo"><span class="skill-name">SQL Server</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo"><span class="skill-name">Git</span></div>
+          <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo"><span class="skill-name">GitHub</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tableau compétences E5 -->
+    <div class="section-label reveal" style="margin-top: 3rem;">Épreuve E5 — Référentiel BTS SIO</div>
+    <h2 class="section-title reveal">Tableau de <span>compétences</span></h2>
+
+    <p class="skills-intro-text reveal">L'épreuve E5 évalue les compétences développées à travers au moins deux projets en rapport avec l'option SLAM, présentées lors de la formation.</p>
+
+    <div class="skills-table-container reveal">
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>Gérer le patrimoine</th>
+            <th>Répondre aux incidents</th>
+            <th>Présence en ligne</th>
+            <th>Mode projet</th>
+            <th>Service informatique</th>
+            <th>Dév. professionnel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="td-title">Gestion d'actifs</div><div class="td-desc">Inventaire et suivi du matériel</div></td>
+            <td><div class="td-title">Support technique</div><div class="td-desc">Assistance et résolution d'incidents</div></td>
+            <td><div class="td-title">Développement Web</div><div class="td-desc">Sites vitrines et applications</div></td>
+            <td><div class="td-title">Méthode Agile</div><div class="td-desc">Scrum, Kanban</div></td>
+            <td><div class="td-title">Déploiement</div><div class="td-desc">Mise en production</div></td>
+            <td><div class="td-title">Veille techno.</div><div class="td-desc">Auto-formation continue</div></td>
+          </tr>
+          <tr>
+            <td><div class="td-title">Documentation</div><div class="td-desc">Rédaction de procédures</div></td>
+            <td><div class="td-title">Diagnostic</div><div class="td-desc">Analyse et troubleshooting</div></td>
+            <td><div class="td-title">SEO</div><div class="td-desc">Optimisation et visibilité</div></td>
+            <td><div class="td-title">Gestion de projet</div><div class="td-desc">Planning et coordination</div></td>
+            <td><div class="td-title">Tests & QA</div><div class="td-desc">Validation et qualité</div></td>
+            <td><div class="td-title">Certifications</div><div class="td-desc">Formation professionnelle</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 2rem;" class="reveal">
+      <a href="docu/~$ATADET GUY BTS SIO .xlsx" class="btn-secondary">Tableau de synthèse ↗</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PROJETS
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="projects">
+    <div class="section-label">04 — Projets</div>
+    <h2 class="section-title">Ce que j'ai <span>réalisé</span></h2>
+
+    <div class="projects-grid">
+
+     
+
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <img src="https://placehold.co/400x150/0f0f1a/00ffb4?text=Portfolio" alt="Portfolio" />
+        </div>
+        <div class="project-body">
+          <h3>Portfolio Interactif</h3>
+          <p>Site portfolio moderne avec animations fluides, design responsive et particules interactives.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#">⌥ Code source</a>
+            <a href="#">⊙ Démo</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       VEILLE TECHNOLOGIQUE
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="tech">
+    <div class="section-label">05 — Veille technologique</div>
+    <h2 class="section-title">la robotique <span>exosquelette</span></h2>
+
+    <p class="skills-intro-text">Dans le cadre du BTS SIO, je réalise une veille continue dans le domaine de la robotique exosquelette ,les avantages et les défis.</p>
+
+    <div class="tech-grid">
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">🔒</div>
+        <h3>Sécurisation du code Java : bonnes pratiques modernes</h3>
+        <p>Les techniques essentielles pour écrire du code Java sécurisé et éviter les vulnérabilités les plus courantes dans vos applications.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">Oracle Security Blog</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">🛡️</div>
+        <h3>Comment éviter les failles XSS et SQL Injection ?</h3>
+        <p>Guide sur la prévention des deux vulnérabilités les plus répandues en développement web, avec exemples et solutions concrètes.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">OWASP Foundation</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">🧑‍💻</div>
+        <h3>DevSecOps : intégrer la sécurité dans le développement</h3>
+        <p>Comment intégrer les pratiques de sécurité dès les premières étapes du cycle de développement.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">Dev.to Community</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">⚠️</div>
+        <h3>Analyse des vulnérabilités courantes en 2025</h3>
+        <p>Étude des nouvelles menaces identifiées en 2025 et stratégies pour protéger les applications contre ces risques.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">CVE Details</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">🔐</div>
+        <h3>Authentification sécurisée : JWT vs Sessions</h3>
+        <p>Comparaison des méthodes d'authentification modernes et leurs implications en sécurité pour les applications web.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">Medium Engineering</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+      <div class="tech-card reveal">
+        <div class="tech-card-icon">🔍</div>
+        <h3>Audit de code : détecter les failles de sécurité</h3>
+        <p>Méthodologie et outils pour effectuer des audits de sécurité efficaces avant la mise en production.</p>
+        <div class="tech-card-footer">
+          <span class="tech-source">GitHub Security Lab</span>
+          <a href="#">Lire →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════════════ -->
+  <div class="section-sep"><hr></div>
+  <section id="contact">
+    <div class="section-label" style="justify-content: center;">06 — Contact</div>
+    <h2 class="section-title">Travaillons <span>ensemble</span></h2>
+    <p class="contact-intro">Envie de collaborer sur un projet ou simplement discuter ?<br>N'hésitez pas à me contacter !</p>
+
+    <div class="contact-cards reveal">
+      <a href="https://linkedin.com/in/gaius" target="_blank" class="contact-card">
+        <div class="contact-card-icon">💼</div>
+        <div class="contact-card-text">
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">https://www.linkedin.com/in/guy-  siptene-atadet-165a5b33b/</div>
+        </div>
+        <div class="contact-card-arrow">→</div>
+      </a>
+
+      <a href="https://github.com/kiraCode-242" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🐙</div>
+        <div class="contact-card-text">
+          <div class="contact-card-label">GitHub</div>
+          <div class="contact-card-value">https://github.com/Guyat242</div>
+        </div>
+        <div class="contact-card-arrow">→</div>
+      </a>
+
+      <a href="docu/CV_Guy_ATADET_Alternance-1.pdf " target="_blank" class="contact-card">
+        <div class="contact-card-icon">📄</div>
+        <div class="contact-card-text">
+          <div class="contact-card-label">Curriculum Vitae</div>
+          <div class="contact-card-value">CV_Guy_ATADET.pdf</div>
+        </div>
+        <div class="contact-card-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-text">
+      © 2025 <span>Guy ATADET</span> · Développeur Web · BTS SIO SLAM
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Guyat242" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/guy-siptene-atadet-165a5b33b/" target="_blank">LinkedIn</a>
+      <a href="docu/ATADET_GUY_CV_Alternance-1.pdf" target="_blank">CV</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
